@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 public partial class Administrador_AgregarStand : System.Web.UI.Page
 {
-    // Stand
+    // Standdsfdsf
     clsStand objStand = new clsStand();
     protected void Page_Load(object sender, EventArgs e)
     {
