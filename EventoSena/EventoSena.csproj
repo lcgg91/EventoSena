@@ -1,0 +1,682 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1746194A-72E6-445E-9DD3-22B34721EC3D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EventoSena</RootNamespace>
+    <AssemblyName>EventoSena</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Administrador\AgregarFeria.aspx" />
+    <Content Include="Administrador\AgregarStand.aspx" />
+    <Content Include="Administrador\archivos\ProductosStand 1-2\Camila Cabuya30012020120000.jpg" />
+    <Content Include="Administrador\archivos\ProductosStand 1-7\Andres Bernal M-03.jpg" />
+    <Content Include="Administrador\archivos\ProductosStand 1-8\Andres Bernal M-03.jpg" />
+    <Content Include="Administrador\archivos\productos\asdasd-asdas - 12\07\2021\eci.png" />
+    <Content Include="Administrador\archivos\productos\asdasd-asdasd - 12\07\2021\error.jpg" />
+    <Content Include="Administrador\archivos\productos\Stand 1-6\Andres Bernal M-03.jpg" />
+    <Content Include="Administrador\archivos\stands\asdasd-12\07\2021\Camila Cabuya30012020120000.jpg" />
+    <Content Include="Administrador\archivos\stands\Stand 1-6\Camila Cabuya30012020120000.jpg" />
+    <Content Include="Administrador\assets\fonts\fa-solid-900.svg" />
+    <Content Include="Administrador\assets\fonts\Pe-icon-7-stroke.svg" />
+    <Content Include="Administrador\assets\images\avatars\1.jpg" />
+    <Content Include="Administrador\assets\images\avatars\10.jpg" />
+    <Content Include="Administrador\assets\images\avatars\11.jpg" />
+    <Content Include="Administrador\assets\images\avatars\12.jpg" />
+    <Content Include="Administrador\assets\images\avatars\2.jpg" />
+    <Content Include="Administrador\assets\images\avatars\3.jpg" />
+    <Content Include="Administrador\assets\images\avatars\4.jpg" />
+    <Content Include="Administrador\assets\images\avatars\5.jpg" />
+    <Content Include="Administrador\assets\images\avatars\8.jpg" />
+    <Content Include="Administrador\assets\images\avatars\9.jpg" />
+    <Content Include="Administrador\assets\images\logo-inverse.png" />
+    <Content Include="Administrador\assets\images\logo.png" />
+    <Content Include="Administrador\assets\scripts\bootstrap.css" />
+    <Content Include="Administrador\assets\scripts\chosen\chosen-sprite%402x.png" />
+    <Content Include="Administrador\assets\scripts\chosen\chosen-sprite.png" />
+    <Content Include="Administrador\assets\scripts\chosen\chosen.css" />
+    <Content Include="Administrador\assets\scripts\chosen\chosen.min.css" />
+    <Content Include="Administrador\assets\scripts\chosen\chosen\chosen.jquery.js" />
+    <Content Include="Administrador\assets\scripts\chosen\chosen\chosen.jquery.min.js" />
+    <Content Include="Administrador\assets\scripts\chosen\chosen\chosen.proto.js" />
+    <Content Include="Administrador\assets\scripts\chosen\chosen\chosen.proto.min.js" />
+    <Content Include="Administrador\assets\scripts\dataTables.bootstrap4.min.css" />
+    <Content Include="Administrador\assets\scripts\dataTables.bootstrap4.min.js" />
+    <Content Include="Administrador\assets\scripts\dataTables.responsive.min.js" />
+    <Content Include="Administrador\assets\scripts\jquery-2.1.4.min.js" />
+    <Content Include="Administrador\assets\scripts\jquery-3.3.1.js" />
+    <Content Include="Administrador\assets\scripts\jquery.dataTables.min.js" />
+    <Content Include="Administrador\assets\scripts\main.js" />
+    <Content Include="Administrador\assets\scripts\sweetalert.min.css" />
+    <Content Include="Administrador\assets\scripts\sweetalert.min.js" />
+    <Content Include="Administrador\assets\styles\responsive.dataTables.min.css" />
+    <Content Include="Administrador\Default.aspx" />
+    <Content Include="Administrador\DetallesFeria.aspx" />
+    <Content Include="Administrador\DetallesStand.aspx" />
+    <Content Include="Administrador\Ferias.aspx" />
+    <Content Include="Administrador\images\GTH.png" />
+    <Content Include="Administrador\images\iconos\edit.png" />
+    <Content Include="Administrador\images\iconos\facebook_icon.png" />
+    <Content Include="Administrador\images\iconos\Instagram_icon.png" />
+    <Content Include="Administrador\images\iconos\telegram_icon.png" />
+    <Content Include="Administrador\images\iconos\Twitter_icon.png" />
+    <Content Include="Administrador\images\iconos\Whatsapp_icon.png" />
+    <Content Include="Administrador\images\image001.png" />
+    <Content Include="Administrador\images\image002.png" />
+    <Content Include="Administrador\images\image003.png" />
+    <Content Include="Administrador\images\image004.png" />
+    <Content Include="Administrador\images\image005.png" />
+    <Content Include="Administrador\images\image006.png" />
+    <Content Include="Administrador\images\image007.png" />
+    <Content Include="Administrador\images\image008.png" />
+    <Content Include="Administrador\images\image009.png" />
+    <Content Include="Administrador\images\image010.png" />
+    <Content Include="Administrador\images\image011.png" />
+    <Content Include="Administrador\images\image012.png" />
+    <Content Include="Administrador\images\image013.png" />
+    <Content Include="Administrador\images\image014.png" />
+    <Content Include="Administrador\images\image015.png" />
+    <Content Include="Administrador\images\image016.png" />
+    <Content Include="Administrador\images\image017.png" />
+    <Content Include="Administrador\images\image018.png" />
+    <Content Include="Administrador\images\image019.png" />
+    <Content Include="Administrador\images\image020.png" />
+    <Content Include="Administrador\images\image021.png" />
+    <Content Include="Administrador\images\image022.png" />
+    <Content Include="Administrador\images\image023.png" />
+    <Content Include="Administrador\images\image024.png" />
+    <Content Include="Administrador\images\image025.png" />
+    <Content Include="Administrador\images\image026.png" />
+    <Content Include="Administrador\images\integraGif.gif" />
+    <Content Include="Administrador\images\integraGif_.gif" />
+    <Content Include="Administrador\images\load.gif" />
+    <Content Include="Administrador\images\mapa de procesos-01.jpg" />
+    <Content Include="Administrador\images\mapa-de-procesos.png" />
+    <Content Include="Administrador\images\search.png" />
+    <Content Include="Administrador\images\sig.png" />
+    <Content Include="Administrador\main.css" />
+    <Content Include="Administrador\Stand.aspx" />
+    <Content Include="assets\css\style-default.min.css" />
+    <Content Include="assets\img\about-bg.jpg" />
+    <Content Include="assets\img\about-bg2.jpg" />
+    <Content Include="assets\img\about-bgmusic.jpg" />
+    <Content Include="assets\img\about-christmas.png" />
+    <Content Include="assets\img\about-img.jpg" />
+    <Content Include="assets\img\about-logo.png" />
+    <Content Include="assets\img\about-sp.jpg" />
+    <Content Include="assets\img\about-video-bg2.jpg" />
+    <Content Include="assets\img\bannar-comingsoon.jpg" />
+    <Content Include="assets\img\bannar-home2.jpg" />
+    <Content Include="assets\img\bannar4.jpg" />
+    <Content Include="assets\img\bannar5.jpg" />
+    <Content Include="assets\img\bannar6.jpg" />
+    <Content Include="assets\img\banner-bg2.jpg" />
+    <Content Include="assets\img\banner-christmas.jpg" />
+    <Content Include="assets\img\banner-circle.jpg" />
+    <Content Include="assets\img\banner-inner2.jpg" />
+    <Content Include="assets\img\banner-music.jpg" />
+    <Content Include="assets\img\banner-new.jpg" />
+    <Content Include="assets\img\banner-new2.jpg" />
+    <Content Include="assets\img\banner.jpg" />
+    <Content Include="assets\img\banner2.jpg" />
+    <Content Include="assets\img\banner3.jpg" />
+    <Content Include="assets\img\christmas-video.jpg" />
+    <Content Include="assets\img\dots2.png" />
+    <Content Include="assets\img\favicon.ico" />
+    <Content Include="assets\img\favicon\android-icon-192x192.png" />
+    <Content Include="assets\img\favicon\apple-icon-114x114.png" />
+    <Content Include="assets\img\favicon\apple-icon-120x120.png" />
+    <Content Include="assets\img\favicon\apple-icon-144x144.png" />
+    <Content Include="assets\img\favicon\apple-icon-152x152.png" />
+    <Content Include="assets\img\favicon\apple-icon-180x180.png" />
+    <Content Include="assets\img\favicon\apple-icon-57x57.png" />
+    <Content Include="assets\img\favicon\apple-icon-60x60.png" />
+    <Content Include="assets\img\favicon\apple-icon-72x72.png" />
+    <Content Include="assets\img\favicon\apple-icon-76x76.png" />
+    <Content Include="assets\img\favicon\favicon-16x16.png" />
+    <Content Include="assets\img\favicon\favicon-32x32.png" />
+    <Content Include="assets\img\favicon\favicon-96x96.png" />
+    <Content Include="assets\img\footer-bg.jpg" />
+    <Content Include="assets\img\footer-bgmusic.jpg" />
+    <Content Include="assets\img\footer-christmas.jpg" />
+    <Content Include="assets\img\footer-logo.png" />
+    <Content Include="assets\img\gallery\gallery2.jpg" />
+    <Content Include="assets\img\gallery\gallery3.jpg" />
+    <Content Include="assets\img\gallery\gallery4.jpg" />
+    <Content Include="assets\img\gallery\gallery5.jpg" />
+    <Content Include="assets\img\gallery\gallery6.jpg" />
+    <Content Include="assets\img\ice-down-ash.png" />
+    <Content Include="assets\img\ice-up-ash.png" />
+    <Content Include="assets\img\ice-up-brand.png" />
+    <Content Include="assets\img\icons\1.png" />
+    <Content Include="assets\img\icons\2.png" />
+    <Content Include="assets\img\icons\3.png" />
+    <Content Include="assets\img\icons\4.png" />
+    <Content Include="assets\img\image-alignment.jpg" />
+    <Content Include="assets\img\info-christ-icon1.png" />
+    <Content Include="assets\img\info-christ-icon2.png" />
+    <Content Include="assets\img\info-christ-icon3.png" />
+    <Content Include="assets\img\info-icon1.png" />
+    <Content Include="assets\img\info-icon2.png" />
+    <Content Include="assets\img\info-icon3.png" />
+    <Content Include="assets\img\logo.png" />
+    <Content Include="assets\img\milestone-bg.jpg" />
+    <Content Include="assets\img\news\news1.jpg" />
+    <Content Include="assets\img\news\news2.jpg" />
+    <Content Include="assets\img\news\news3.jpg" />
+    <Content Include="assets\img\opengraph\fbphoto.jpg" />
+    <Content Include="assets\img\parallax\3.png" />
+    <Content Include="assets\img\parallax\4.png" />
+    <Content Include="assets\img\parallax\5.png" />
+    <Content Include="assets\img\parallax\6.png" />
+    <Content Include="assets\img\parallax\7.png" />
+    <Content Include="assets\img\parallax\pl_mb1.html" />
+    <Content Include="assets\img\parallex-bg.jpg" />
+    <Content Include="assets\img\quote.png" />
+    <Content Include="assets\img\registration-bg.jpg" />
+    <Content Include="assets\img\registration-simple-bg.jpg" />
+    <Content Include="assets\img\registration-style-christmas.png" />
+    <Content Include="assets\img\registrationbox-bg.jpg" />
+    <Content Include="assets\img\schedule-bg-pattern.png" />
+    <Content Include="assets\img\schedule-bg-pattern2.png" />
+    <Content Include="assets\img\schedule-bgmusic.jpg" />
+    <Content Include="assets\img\schedule-christmas-pattern.png" />
+    <Content Include="assets\img\schedule\speaker1.jpg" />
+    <Content Include="assets\img\schedule\speaker2.jpg" />
+    <Content Include="assets\img\schedule\speaker3.jpg" />
+    <Content Include="assets\img\schedule\speaker4.jpg" />
+    <Content Include="assets\img\schedule\speaker5.jpg" />
+    <Content Include="assets\img\slider1.jpg" />
+    <Content Include="assets\img\slider4.jpg" />
+    <Content Include="assets\img\slider6.jpg" />
+    <Content Include="assets\img\slider7.jpg" />
+    <Content Include="assets\img\speakers-bg-black.jpg" />
+    <Content Include="assets\img\speakers-bg-brand.jpg" />
+    <Content Include="assets\img\speakers-bg2.jpg" />
+    <Content Include="assets\img\speakers-christmas-bg.jpg" />
+    <Content Include="assets\img\speakers\speaker1.jpg" />
+    <Content Include="assets\img\speakers\speaker2.jpg" />
+    <Content Include="assets\img\speakers\speaker3.jpg" />
+    <Content Include="assets\img\speakers\speaker4.jpg" />
+    <Content Include="assets\img\speakers\speaker5.jpg" />
+    <Content Include="assets\img\speakers\speaker6.jpg" />
+    <Content Include="assets\img\sponsor-bg.jpg" />
+    <Content Include="assets\img\sponsors\sponsor-sp1.png" />
+    <Content Include="assets\img\sponsors\sponsor-sp2.png" />
+    <Content Include="assets\img\sponsors\sponsor-sp3.png" />
+    <Content Include="assets\img\sponsors\sponsor1.png" />
+    <Content Include="assets\img\sponsors\sponsor2.png" />
+    <Content Include="assets\img\sponsors\sponsor3.png" />
+    <Content Include="assets\img\sponsors\sponsor4.png" />
+    <Content Include="assets\img\sponsors\sponsor5.png" />
+    <Content Include="assets\img\sponsors\sponsor6.png" />
+    <Content Include="assets\img\sponsors\w-sponsor-sp1.png" />
+    <Content Include="assets\img\sponsors\w-sponsor-sp2.png" />
+    <Content Include="assets\img\sponsors\w-sponsor-sp3.png" />
+    <Content Include="assets\img\sponsors\w-sponsor1.png" />
+    <Content Include="assets\img\sponsors\w-sponsor2.png" />
+    <Content Include="assets\img\sponsors\w-sponsor3.png" />
+    <Content Include="assets\img\sponsors\w-sponsor4.png" />
+    <Content Include="assets\img\sponsors\w-sponsor5.png" />
+    <Content Include="assets\img\sponsors\w-sponsor6.png" />
+    <Content Include="assets\img\subscribe-bg-black.jpg" />
+    <Content Include="assets\img\subscribe-bg.jpg" />
+    <Content Include="assets\img\testi-bg.jpg" />
+    <Content Include="assets\img\testimonials\author1.jpg" />
+    <Content Include="assets\img\travel-info1.jpg" />
+    <Content Include="assets\img\travel-info2.jpg" />
+    <Content Include="assets\img\travel-info3.jpg" />
+    <Content Include="assets\img\travelinfo1.jpg" />
+    <Content Include="assets\img\travelinfo2.jpg" />
+    <Content Include="assets\img\travelinfo3.jpg" />
+    <Content Include="assets\img\twittercardimg\twittercard-280-150.jpg" />
+    <Content Include="assets\img\video-bg.jpg" />
+    <Content Include="assets\js\custom.script.js" />
+    <Content Include="assets\js\vendor\jquery-1.12.4.min.js" />
+    <Content Include="assets\js\vendor\modernizr-2.8.3.min.js" />
+    <Content Include="assets\libs\bootstrap\css\bootstrap.min.css" />
+    <Content Include="assets\libs\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="assets\libs\bootstrap\js\bootstrap.min.js" />
+    <Content Include="assets\libs\countdown.js" />
+    <Content Include="assets\libs\counterup\jquery.counterup.min.js" />
+    <Content Include="assets\libs\fontawesome\css\font-awesome.min.css" />
+    <Content Include="assets\libs\fontawesome\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="assets\libs\gmap\jquery.googlemap.js" />
+    <Content Include="assets\libs\header-parallax.js" />
+    <Content Include="assets\libs\instafeed.min.js" />
+    <Content Include="assets\libs\jquery.easing.min.js" />
+    <Content Include="assets\libs\jquery.smooth-scroll.js" />
+    <Content Include="assets\libs\jquery.smooth-scroll.min.js" />
+    <Content Include="assets\libs\jquery.validate.js" />
+    <Content Include="assets\libs\maginificpopup\jquery.magnific-popup.min.js" />
+    <Content Include="assets\libs\maginificpopup\magnific-popup.css" />
+    <Content Include="assets\libs\owlcarousel\owl.carousel.min.css" />
+    <Content Include="assets\libs\owlcarousel\owl.carousel.min.js" />
+    <Content Include="assets\libs\owlcarousel\owl.theme.default.min.css" />
+    <Content Include="assets\libs\owlcarousel\owl.video.play.html" />
+    <Content Include="assets\libs\timer\TimeCircles.css" />
+    <Content Include="assets\libs\timer\TimeCircles.js" />
+    <Content Include="assets\libs\typed\typed.min.js" />
+    <Content Include="assets\libs\waypoints.min.js" />
+    <Content Include="calendario.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="DetalleEvento.aspx" />
+    <Content Include="Evento.aspx" />
+    <Content Include="ferias.aspx" />
+    <Content Include="ferias.aspx.vb" />
+    <Content Include="gastronomia.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="images\gastronomia.jpg" />
+    <Content Include="images\SENNOVA-03.png" />
+    <Content Include="Inscripcion.aspx" />
+    <Content Include="Inscripcion.aspx.vb" />
+    <Content Include="plantilla\about.html" />
+    <Content Include="plantilla\assets\css\style-default.min.css" />
+    <Content Include="plantilla\assets\img\about-bg.jpg" />
+    <Content Include="plantilla\assets\img\about-bg2.jpg" />
+    <Content Include="plantilla\assets\img\about-bgmusic.jpg" />
+    <Content Include="plantilla\assets\img\about-christmas.png" />
+    <Content Include="plantilla\assets\img\about-img.jpg" />
+    <Content Include="plantilla\assets\img\about-logo.png" />
+    <Content Include="plantilla\assets\img\about-sp.jpg" />
+    <Content Include="plantilla\assets\img\about-video-bg2.jpg" />
+    <Content Include="plantilla\assets\img\bannar-comingsoon.jpg" />
+    <Content Include="plantilla\assets\img\bannar-home2.jpg" />
+    <Content Include="plantilla\assets\img\bannar4.jpg" />
+    <Content Include="plantilla\assets\img\bannar5.jpg" />
+    <Content Include="plantilla\assets\img\bannar6.jpg" />
+    <Content Include="plantilla\assets\img\banner-bg2.jpg" />
+    <Content Include="plantilla\assets\img\banner-christmas.jpg" />
+    <Content Include="plantilla\assets\img\banner-circle.jpg" />
+    <Content Include="plantilla\assets\img\banner-inner2.jpg" />
+    <Content Include="plantilla\assets\img\banner-music.jpg" />
+    <Content Include="plantilla\assets\img\banner-new.jpg" />
+    <Content Include="plantilla\assets\img\banner-new2.jpg" />
+    <Content Include="plantilla\assets\img\banner.jpg" />
+    <Content Include="plantilla\assets\img\banner2.jpg" />
+    <Content Include="plantilla\assets\img\banner3.jpg" />
+    <Content Include="plantilla\assets\img\christmas-video.jpg" />
+    <Content Include="plantilla\assets\img\dots2.png" />
+    <Content Include="plantilla\assets\img\favicon.ico" />
+    <Content Include="plantilla\assets\img\favicon\android-icon-192x192.png" />
+    <Content Include="plantilla\assets\img\favicon\apple-icon-114x114.png" />
+    <Content Include="plantilla\assets\img\favicon\apple-icon-120x120.png" />
+    <Content Include="plantilla\assets\img\favicon\apple-icon-144x144.png" />
+    <Content Include="plantilla\assets\img\favicon\apple-icon-152x152.png" />
+    <Content Include="plantilla\assets\img\favicon\apple-icon-180x180.png" />
+    <Content Include="plantilla\assets\img\favicon\apple-icon-57x57.png" />
+    <Content Include="plantilla\assets\img\favicon\apple-icon-60x60.png" />
+    <Content Include="plantilla\assets\img\favicon\apple-icon-72x72.png" />
+    <Content Include="plantilla\assets\img\favicon\apple-icon-76x76.png" />
+    <Content Include="plantilla\assets\img\favicon\favicon-16x16.png" />
+    <Content Include="plantilla\assets\img\favicon\favicon-32x32.png" />
+    <Content Include="plantilla\assets\img\favicon\favicon-96x96.png" />
+    <Content Include="plantilla\assets\img\footer-bg.jpg" />
+    <Content Include="plantilla\assets\img\footer-bgmusic.jpg" />
+    <Content Include="plantilla\assets\img\footer-christmas.jpg" />
+    <Content Include="plantilla\assets\img\footer-logo.png" />
+    <Content Include="plantilla\assets\img\gallery\gallery2.jpg" />
+    <Content Include="plantilla\assets\img\gallery\gallery3.jpg" />
+    <Content Include="plantilla\assets\img\gallery\gallery4.jpg" />
+    <Content Include="plantilla\assets\img\gallery\gallery5.jpg" />
+    <Content Include="plantilla\assets\img\gallery\gallery6.jpg" />
+    <Content Include="plantilla\assets\img\ice-down-ash.png" />
+    <Content Include="plantilla\assets\img\ice-up-ash.png" />
+    <Content Include="plantilla\assets\img\ice-up-brand.png" />
+    <Content Include="plantilla\assets\img\icons\1.png" />
+    <Content Include="plantilla\assets\img\icons\2.png" />
+    <Content Include="plantilla\assets\img\icons\3.png" />
+    <Content Include="plantilla\assets\img\icons\4.png" />
+    <Content Include="plantilla\assets\img\image-alignment.jpg" />
+    <Content Include="plantilla\assets\img\info-christ-icon1.png" />
+    <Content Include="plantilla\assets\img\info-christ-icon2.png" />
+    <Content Include="plantilla\assets\img\info-christ-icon3.png" />
+    <Content Include="plantilla\assets\img\info-icon1.png" />
+    <Content Include="plantilla\assets\img\info-icon2.png" />
+    <Content Include="plantilla\assets\img\info-icon3.png" />
+    <Content Include="plantilla\assets\img\logo.png" />
+    <Content Include="plantilla\assets\img\milestone-bg.jpg" />
+    <Content Include="plantilla\assets\img\news\news1.jpg" />
+    <Content Include="plantilla\assets\img\news\news2.jpg" />
+    <Content Include="plantilla\assets\img\news\news3.jpg" />
+    <Content Include="plantilla\assets\img\opengraph\fbphoto.jpg" />
+    <Content Include="plantilla\assets\img\parallax\3.png" />
+    <Content Include="plantilla\assets\img\parallax\4.png" />
+    <Content Include="plantilla\assets\img\parallax\5.png" />
+    <Content Include="plantilla\assets\img\parallax\6.png" />
+    <Content Include="plantilla\assets\img\parallax\7.png" />
+    <Content Include="plantilla\assets\img\parallax\pl_mb1.html" />
+    <Content Include="plantilla\assets\img\parallex-bg.jpg" />
+    <Content Include="plantilla\assets\img\quote.png" />
+    <Content Include="plantilla\assets\img\registration-bg.jpg" />
+    <Content Include="plantilla\assets\img\registration-simple-bg.jpg" />
+    <Content Include="plantilla\assets\img\registration-style-christmas.png" />
+    <Content Include="plantilla\assets\img\registrationbox-bg.jpg" />
+    <Content Include="plantilla\assets\img\schedule-bg-pattern.png" />
+    <Content Include="plantilla\assets\img\schedule-bg-pattern2.png" />
+    <Content Include="plantilla\assets\img\schedule-bgmusic.jpg" />
+    <Content Include="plantilla\assets\img\schedule-christmas-pattern.png" />
+    <Content Include="plantilla\assets\img\schedule\speaker1.jpg" />
+    <Content Include="plantilla\assets\img\schedule\speaker2.jpg" />
+    <Content Include="plantilla\assets\img\schedule\speaker3.jpg" />
+    <Content Include="plantilla\assets\img\schedule\speaker4.jpg" />
+    <Content Include="plantilla\assets\img\schedule\speaker5.jpg" />
+    <Content Include="plantilla\assets\img\slider1.jpg" />
+    <Content Include="plantilla\assets\img\slider4.jpg" />
+    <Content Include="plantilla\assets\img\slider6.jpg" />
+    <Content Include="plantilla\assets\img\slider7.jpg" />
+    <Content Include="plantilla\assets\img\speakers-bg-black.jpg" />
+    <Content Include="plantilla\assets\img\speakers-bg-brand.jpg" />
+    <Content Include="plantilla\assets\img\speakers-bg2.jpg" />
+    <Content Include="plantilla\assets\img\speakers-christmas-bg.jpg" />
+    <Content Include="plantilla\assets\img\speakers\speaker1.jpg" />
+    <Content Include="plantilla\assets\img\speakers\speaker2.jpg" />
+    <Content Include="plantilla\assets\img\speakers\speaker3.jpg" />
+    <Content Include="plantilla\assets\img\speakers\speaker4.jpg" />
+    <Content Include="plantilla\assets\img\speakers\speaker5.jpg" />
+    <Content Include="plantilla\assets\img\speakers\speaker6.jpg" />
+    <Content Include="plantilla\assets\img\sponsor-bg.jpg" />
+    <Content Include="plantilla\assets\img\sponsors\sponsor-sp1.png" />
+    <Content Include="plantilla\assets\img\sponsors\sponsor-sp2.png" />
+    <Content Include="plantilla\assets\img\sponsors\sponsor-sp3.png" />
+    <Content Include="plantilla\assets\img\sponsors\sponsor1.png" />
+    <Content Include="plantilla\assets\img\sponsors\sponsor2.png" />
+    <Content Include="plantilla\assets\img\sponsors\sponsor3.png" />
+    <Content Include="plantilla\assets\img\sponsors\sponsor4.png" />
+    <Content Include="plantilla\assets\img\sponsors\sponsor5.png" />
+    <Content Include="plantilla\assets\img\sponsors\sponsor6.png" />
+    <Content Include="plantilla\assets\img\sponsors\w-sponsor-sp1.png" />
+    <Content Include="plantilla\assets\img\sponsors\w-sponsor-sp2.png" />
+    <Content Include="plantilla\assets\img\sponsors\w-sponsor-sp3.png" />
+    <Content Include="plantilla\assets\img\sponsors\w-sponsor1.png" />
+    <Content Include="plantilla\assets\img\sponsors\w-sponsor2.png" />
+    <Content Include="plantilla\assets\img\sponsors\w-sponsor3.png" />
+    <Content Include="plantilla\assets\img\sponsors\w-sponsor4.png" />
+    <Content Include="plantilla\assets\img\sponsors\w-sponsor5.png" />
+    <Content Include="plantilla\assets\img\sponsors\w-sponsor6.png" />
+    <Content Include="plantilla\assets\img\subscribe-bg-black.jpg" />
+    <Content Include="plantilla\assets\img\subscribe-bg.jpg" />
+    <Content Include="plantilla\assets\img\testi-bg.jpg" />
+    <Content Include="plantilla\assets\img\testimonials\author1.jpg" />
+    <Content Include="plantilla\assets\img\travel-info1.jpg" />
+    <Content Include="plantilla\assets\img\travel-info2.jpg" />
+    <Content Include="plantilla\assets\img\travel-info3.jpg" />
+    <Content Include="plantilla\assets\img\travelinfo1.jpg" />
+    <Content Include="plantilla\assets\img\travelinfo2.jpg" />
+    <Content Include="plantilla\assets\img\travelinfo3.jpg" />
+    <Content Include="plantilla\assets\img\twittercardimg\twittercard-280-150.jpg" />
+    <Content Include="plantilla\assets\img\video-bg.jpg" />
+    <Content Include="plantilla\assets\js\custom.script.js" />
+    <Content Include="plantilla\assets\js\vendor\jquery-1.12.4.min.js" />
+    <Content Include="plantilla\assets\js\vendor\modernizr-2.8.3.min.js" />
+    <Content Include="plantilla\assets\libs\bootstrap\css\bootstrap.min.css" />
+    <Content Include="plantilla\assets\libs\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="plantilla\assets\libs\bootstrap\js\bootstrap.min.js" />
+    <Content Include="plantilla\assets\libs\countdown.js" />
+    <Content Include="plantilla\assets\libs\counterup\jquery.counterup.min.js" />
+    <Content Include="plantilla\assets\libs\fontawesome\css\font-awesome.min.css" />
+    <Content Include="plantilla\assets\libs\fontawesome\fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="plantilla\assets\libs\gmap\jquery.googlemap.js" />
+    <Content Include="plantilla\assets\libs\header-parallax.js" />
+    <Content Include="plantilla\assets\libs\instafeed.min.js" />
+    <Content Include="plantilla\assets\libs\jquery.easing.min.js" />
+    <Content Include="plantilla\assets\libs\jquery.smooth-scroll.js" />
+    <Content Include="plantilla\assets\libs\jquery.smooth-scroll.min.js" />
+    <Content Include="plantilla\assets\libs\jquery.validate.js" />
+    <Content Include="plantilla\assets\libs\maginificpopup\jquery.magnific-popup.min.js" />
+    <Content Include="plantilla\assets\libs\maginificpopup\magnific-popup.css" />
+    <Content Include="plantilla\assets\libs\owlcarousel\owl.carousel.min.css" />
+    <Content Include="plantilla\assets\libs\owlcarousel\owl.carousel.min.js" />
+    <Content Include="plantilla\assets\libs\owlcarousel\owl.theme.default.min.css" />
+    <Content Include="plantilla\assets\libs\owlcarousel\owl.video.play.html" />
+    <Content Include="plantilla\assets\libs\timer\TimeCircles.css" />
+    <Content Include="plantilla\assets\libs\timer\TimeCircles.js" />
+    <Content Include="plantilla\assets\libs\typed\typed.min.js" />
+    <Content Include="plantilla\assets\libs\waypoints.min.js" />
+    <Content Include="plantilla\contact.html" />
+    <Content Include="plantilla\gallery.html" />
+    <Content Include="plantilla\index.html" />
+    <Content Include="plantilla\index10.html" />
+    <Content Include="plantilla\index11.html" />
+    <Content Include="plantilla\index12.html" />
+    <Content Include="plantilla\index13.html" />
+    <Content Include="plantilla\index14.html" />
+    <Content Include="plantilla\index15.html" />
+    <Content Include="plantilla\index16.html" />
+    <Content Include="plantilla\index17.html" />
+    <Content Include="plantilla\index18.html" />
+    <Content Include="plantilla\index2.html" />
+    <Content Include="plantilla\index3.html" />
+    <Content Include="plantilla\index4.html" />
+    <Content Include="plantilla\index5.html" />
+    <Content Include="plantilla\index6.html" />
+    <Content Include="plantilla\index7.html" />
+    <Content Include="plantilla\index8.html" />
+    <Content Include="plantilla\index9.html" />
+    <Content Include="plantilla\news-list.html" />
+    <Content Include="plantilla\news-single.html" />
+    <Content Include="plantilla\news.html" />
+    <Content Include="plantilla\registration.html" />
+    <Content Include="plantilla\schedules.html" />
+    <Content Include="plantilla\speaker.html" />
+    <Content Include="plantilla\speakers.html" />
+    <Content Include="plantilla\sponsors.html" />
+    <Content Include="plantilla\switcher\js\switcherd41d.js" />
+    <Content Include="switcher\js\switcherd41d.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Administrador\AgregarFeria.aspx.cs">
+      <DependentUpon>AgregarFeria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\AgregarStand.aspx.cs">
+      <DependentUpon>AgregarStand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\DetallesFeria.aspx.cs">
+      <DependentUpon>DetallesFeria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\DetallesStand.aspx.cs">
+      <DependentUpon>DetallesStand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Ferias.aspx.cs">
+      <DependentUpon>Ferias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administrador\Stand.aspx.cs">
+      <DependentUpon>Stand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Content Include="App_Code\clases\app.cs" />
+    <Content Include="App_Code\clases\usuario.cs" />
+    <Content Include="App_Code\clsConfiguracion.cs" />
+    <Content Include="App_Code\clsCorreo.cs" />
+    <Content Include="App_Code\clsDbPrincipal.cs" />
+    <Content Include="App_Code\clsFerias.cs" />
+    <Content Include="App_Code\clsFunciones.cs" />
+    <Content Include="App_Code\clsPrinFunciones.cs" />
+    <Content Include="App_Code\clsPrinUsuario.cs" />
+    <Content Include="App_Code\clsStand.cs" />
+    <Content Include="App_Code\LdapAuthentication.cs" />
+    <Content Include="App_Code\sha384.cs" />
+    <Content Include="App_Code\validarUsuario.cs" />
+    <Compile Include="calendario.aspx.cs">
+      <DependentUpon>calendario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DetalleEvento.aspx.cs">
+      <DependentUpon>DetalleEvento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Evento.aspx.cs">
+      <DependentUpon>Evento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="gastronomia.aspx.cs">
+      <DependentUpon>gastronomia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".vs\EVENTOS\config\applicationhost.config" />
+    <Content Include=".vs\EVENTOS\v16\.suo" />
+    <Content Include=".vs\ProjectSettings.json" />
+    <Content Include=".vs\slnx.sqlite" />
+    <Content Include=".vs\VSWorkspaceState.json" />
+    <Content Include="Administrador\assets\fonts\fa-solid-900.eot" />
+    <Content Include="Administrador\assets\fonts\fa-solid-900.ttf" />
+    <Content Include="Administrador\assets\fonts\fa-solid-900.woff" />
+    <Content Include="Administrador\assets\fonts\fa-solid-900.woff2" />
+    <Content Include="Administrador\assets\fonts\Pe-icon-7-stroke.eot" />
+    <Content Include="Administrador\assets\fonts\Pe-icon-7-stroke.ttf" />
+    <Content Include="Administrador\assets\fonts\Pe-icon-7-stroke.woff" />
+    <Content Include="Administrador\MasterPage.master" />
+    <Content Include="assets\libs\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="assets\libs\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="assets\libs\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="assets\libs\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="assets\libs\bootstrap\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="assets\libs\fontawesome\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="assets\libs\fontawesome\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="assets\libs\fontawesome\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="assets\libs\fontawesome\fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="assets\libs\fontawesome\fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="MasterPage.master" />
+    <None Include="packages.config" />
+    <Content Include="plantilla\assets\libs\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="plantilla\assets\libs\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="plantilla\assets\libs\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="plantilla\assets\libs\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="plantilla\assets\libs\bootstrap\fonts\glyphicons-halflings-regulard41d.eot" />
+    <Content Include="plantilla\assets\libs\fontawesome\fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="plantilla\assets\libs\fontawesome\fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="plantilla\assets\libs\fontawesome\fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="plantilla\assets\libs\fontawesome\fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="plantilla\assets\libs\fontawesome\fonts\fontawesome-webfontd41d.eot" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="Web.sitemap" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61556</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:61556/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
